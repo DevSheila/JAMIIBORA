@@ -1,0 +1,52 @@
+<article class="card card-product-list">
+	<div class="card-body">
+	<div class="row">
+		<aside class="col-sm-4">
+			<a href="#" class="img-wrap"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQVsO-ci5NQCWMHnb304YQicZcvLEH8WLGJzA&usqp=CAU"></a>
+		</aside> <!-- col.// -->
+		
+        
+			<div class="col-sm-4">
+         <div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"><a href="#" class="btn-link float-right"> <i class="fa fa-heart"></i></a>
+				<a href="#" class="title mt-2 h5">USER :KIARA HAMMADI</a></h3>
+  </div>
+  <div class="panel-body">
+   Location: <span class="badge">Loaction</span>
+  </div>
+  <div class="panel-body">
+   contacts: <span class="badge">Contacts</span>
+  </div>
+</div>
+            </div>
+	</div> <!-- row.// -->
+	</div> <!-- card-body .// -->
+</article>
+<div class="row">
+  {{#each products}}
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail ">
+ {{!-- <img class="image" src="../productImages/{{image}}" style="height: 200px;" alt="{{title}}"> --}}
+      <img src="/productImages/{{id}}{{image}}"  
+      class="image"   alt="{{title}}">
+      <div class="caption">
+        <span class="badge">{{category}}</span>
+        <a href="#"><div class="badge">Location</div></a>
+        <h3>{{title}}</h3>
+        <p>{{desc}}</p>
+        </div>
+
+      <div class="clearfix">
+        
+        <a href="/add-to-cart/{{_id}}" class="btn btn-default  pull-right" role="button">Add to Request Cart</a>
+
+      </div>
+    </div>
+
+  </div>
+    
+{{/each}}
+</div>
+</div>
